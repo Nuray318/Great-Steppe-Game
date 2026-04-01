@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Жоңғар шапқыншылығы жайлы</title>
+<link rel="icon" type="image/png" href="about.jpg">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ОБЩИЕ СТИЛИ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2c2c2c;
+    color: white;
+}
+
+/* КОНТЕЙНЕР */
+.container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ЗАГОЛОВКИ */
+h1 { text-align: center; }
+h2 { margin-bottom: 10px; }
+
+/* НАВИГАЦИЯ */
+nav {
+    background: #1f1f1f;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li { margin: 0 15px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #FFD700;
+}
+
+/* СЕКЦИИ */
+.section {
+    margin: 25px 0;
+    padding: 20px;
+    background: #3a3a3a;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* КНОПКИ */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #FFD700;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover { background: #e6c200; }
+
+/* СКРЫТЫЕ БЛОКИ */
+.hidden { display: none; }
+
+/* СЛАЙДЕР */
+.slider {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-buttons {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #1f1f1f;
+    margin-top: 40px;
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    margin: 10px;
+    max-width: 250px;
+}
+
+.footer-column h3 { color: #FFD700; }
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+/* 📱 АДАПТАЦИЯ */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button { width: 100%; }
+
+    iframe { height: 200px; }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Бастапқы бет</a></li>
+<li><a href="game.html">Ойын туралы</a></li>
+<li><a href="buy.html">Ойынды алу</a></li>
+<li><a class="active" href="jon.html">Жоңғар шапқыншылығы</a></li>
+<li><a href="otzyv.html">Пікірлер</a></li>
+</ul>
+</nav>
+
+
+<div class="container"> <h1>Жоңғар шапқыншылығы</h1> <div class="section"> <h2>Қысқаша түсінік</h2> <p>Жоңғар шапқыншылығы — XVII-XVIII ғасырларда қазақ жеріне жасалған ең ауыр әскери қауіптердің бірі.</p> </div> <div class="section"> <h2>Себептері</h2> <button onclick="toggle('cause')">Ашу</button> <div id="cause" class="hidden"> <p> Жоңғарлардың негізгі мақсаты — өз мемлекетінің аумағын кеңейту, әсіресе мал шаруашылығына қолайлы жайылым жерлерді иелену болды. Көшпелі өмір салтын ұстанған жоңғарлар үшін кең дала мен шұрайлы жерлер аса маңызды еді. Сондықтан олар қазақ жеріне жиі шабуыл жасап, сол аймақтарды бақылауға алуға тырысты. Сонымен қатар, Жетісу мен Оңтүстік Қазақстан өңірлері арқылы өтетін маңызды сауда жолдары да олардың назарында болды. Бұл жолдар арқылы Орта Азия мен Қытай арасындағы сауда жүзеге асатын, сондықтан оны бақылау экономикалық тұрғыдан үлкен пайда әкелетін. Бұдан бөлек, қазақ жерінің табиғи байлығы мен географиялық орналасуы жоңғарлар үшін стратегиялық тұрғыдан тиімді болды. Қазақ даласы көрші мемлекеттерге шығатын маңызды көпір қызметін атқарды. Осы себепті жоңғарлар бұл аймақты өз ықпалына алуға ұмтылды. Сонымен бірге, қазақ жүздерінің арасындағы алауыздық пен ішкі саяси тұрақсыздықты пайдаланып, өз мақсаттарына жетуді жеңілдетуге тырысты. Нәтижесінде, жоңғар шапқыншылығы тек әскери ғана емес, экономикалық және саяси мүдделерге негізделген күрделі процесс болды.</p> <div class="section"> <h2>Негізгі оқиғалар</h2> <button onclick="toggle('events')">Ашу</button> <div id="events" class="hidden"> <p> 1723 жылы басталған «Ақтабан шұбырынды, Алқакөл сұлама» оқиғасы қазақ халқы үшін ең ауыр әрі қайғылы кезеңдердің бірі болды. Жоңғар әскерінің күтпеген және жойқын шабуылы салдарынан қазақ халқы туған жерін тастап, жаппай босқындыққа ұшырады. Адамдар аштық пен ауруға тап болып, үлкен шығынға ұшырады. Бұл кезең халық жадында терең із қалдырды. Алайда осындай қиын уақытта қазақ қоғамында бірлікке деген қажеттілік айқын сезілді. Осы жағдайдан кейін қазақ билеушілері мен рубасылары бас қосып, құрылтайлар өткізе бастады. Құрылтайларда елдің тағдыры шешіліп, жауға қарсы бірлесіп күресу мәселелері талқыланды. Нәтижесінде қазақ жасақтары біріктіріліп, жоңғарларға қарсы ұйымдасқан түрде қарсы тұру басталды. Бұланты-Білеуті және Аңырақай шайқастары қазақ халқының жеңіске деген сенімін арттырған маңызды оқиғалар болды. Әсіресе Аңырақай шайқасы қазақ жасақтарының күш біріктірсе, жауды жеңе алатынын дәлелдеді. Осылайша, «Ақтабан шұбырынды» кезеңі қазақ халқын әлсіреткенімен, кейіннен елдің бірігуіне, құрылтайлардың маңызын арттыруға және азаттық үшін күрестің күшеюіне негіз болды.</p> </div> </div> <div class="section"> <h2>Қазақ батырлары</h2> <button onclick="toggle('heroes')">Ашу</button> <div id="heroes" class="hidden"> <p>Бұл кезеңде қазақ халқының тәуелсіздігі үшін күресте көптеген батырлар ерекше ерлік көрсетті. Солардың ішінде Қабанбай батыр, Бөгенбай батыр және Наурызбай батыр сынды қолбасшылардың орны ерекше болды. Қабанбай батыр жоңғарларға қарсы шайқастарда ірі әскери қолбасшы ретінде танылып, көптеген жеңістерге жетті. Ол ел шекарасын қорғауда үлкен үлес қосты. Бөгенбай батыр да қазақ жасақтарын ұйымдастырып, халықты біріктіруге ықпал етті. Оның батылдығы мен стратегиялық ойлауы жауға қарсы күресте маңызды рөл атқарды. Наурызбай батыр жас болса да, ерекше ерлігімен көзге түсіп, көптеген шайқастарда батырлығын дәлелдеді. Сонымен қатар, Райымбек батыр да жоңғарларға қарсы күресте белсенділік танытып, елін қорғауда батылдық көрсетті. Бұл батырлардың барлығы тек соғыста ғана емес, халықтың рухын көтеруде де маңызды рөл атқарды. Олар елді бірлікке шақырып, қиын кезеңде қазақ халқының жігерін жаншытпай, керісінше күшейте түсті. Осы батырлардың ерлігі қазақ халқының жоңғар шапқыншылығына қарсы тұруына үлкен үлес қосып, тәуелсіздікті сақтап қалуға негіз болды.</p> </div> </div> <div class="section"> <h2>Нәтижесі</h2> <button onclick="toggle('result')">Ашу</button> <div id="result" class="hidden"> <p>Қазақ халқы жоңғар шапқыншылығы кезінде орасан зор шығынға ұшыраса да, бірлік пен ұйымшылдықтың арқасында жауға қарсы тұра алды. Ел басына түскен ауыр кезең қазақ қоғамына үлкен сабақ болды. Бұрынғыдай жүздер арасындағы алауыздық пен өзара тартыстардың қауіпті екені айқын сезілді. Осыны түсінген қазақ билеушілері мен батырлары халықты біріктіруге ерекше көңіл бөлді. Құрылтайлар өткізіліп, ортақ шешімдер қабылданды, ал әскерлер бір орталыққа бағындырылды. Осындай бірліктің нәтижесінде қазақ жасақтары жоңғарларға қарсы ірі жеңістерге қол жеткізе бастады. Бұланты-Білеуті және Аңырақай шайқастары қазақ халқының рухын көтеріп, жеңіске деген сенімді нығайтты. Бұл жеңістер тек әскери жетістік емес, сонымен қатар халықтың біріккен жағдайда кез келген қиындықты еңсере алатынын дәлелдеді. Сонымен қатар, бұл кезең қазақ халқының тарихи санасының қалыптасуына да әсер етті. Ел қорғау, жерді сақтау, бірлік пен ынтымақтың маңызы кейінгі ұрпаққа үлгі ретінде қалды. Жоңғар шапқыншылығы қазақ халқы үшін ауыр сынақ болғанымен, ол халықтың рухын шыңдап, тәуелсіздік үшін күрестің мәнін терең түсінуге мүмкіндік берді. Осылайша, бұл кезең қазақ тарихындағы ең маңызды әрі тағылымы мол беттердің бірі ретінде сақталды.</p> </div> </div>
+
+<div class="section video">
+<h2>Фотолар галереясы</h2>
+
+<div class="slider">
+    <img src="step1.jpg" class="slide active">
+    <img src="step2.jpg" class="slide">
+    <img src="step3.jpg" class="slide">
+</div>
+
+<div class="slider-buttons">
+    <button onclick="prevSlide()">←</button>
+    <button onclick="nextSlide()">→</button>
+</div>
+
+<p>Ойын барысынан көріністер</p>
+</div>
+
+<div class="section" style="text-align:center;">
+<button onclick="finish()">Мен меңгердім</button>
+</div>
+
+</div>
+
+
+<script>
+function toggle(id) {
+    document.getElementById(id).classList.toggle("hidden");
+}
+
+function finish() {
+    alert("Жарайсың! Сен тақырыпты меңгердің!");
+}
+
+/* СЛАЙДЕР */
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((img, i) => {
+        img.classList.remove("active");
+        if (i === index) img.classList.add("active");
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(() => {
+    nextSlide();
+}, 3000);
+</script>
+
+
+
+
+<footer>
+<div class="footer-container">
+<div class="footer-column">
+<h3>Біз жайлы</h3>
+<p>«Ұлы Дала Құрылтайы» — бұл қазақ тарихын, әсіресе жоңғар шапқыншылығы кезеңін заманауи форматта үйретуге арналған білім беру үстел ойыны. Жобаның мақсаты — оқушылардың тарихи ойлауын дамыту, ұлттық құндылықтарды дәріптеу және оқуды қызықты ету.</p>
+</div>
+
+<div class="footer-column">
+<h3>Байланыс</h3>
+<p>Email: tleukabyl_nuray@bk.ru</p>
+<p>Тел: +7 702 123 456</p>
+<p>Атырау қаласы</p>
+</div>
+
+<div class="footer-column">
+<h3>Әлеуметтік желі</h3>
+<a href="https://www.instagram.com/greatsteppe.game/" target="_blank">Instagram</a>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Ұлы Дала Құрылтайы
+</div>
+</footer>
+
+<script>
+function toggle(id) {
+    document.getElementById(id).classList.toggle("hidden");
+}
+
+function finish() {
+    alert("Жарайсың! Сен тақырыпты меңгердің!");
+}
+
+/* СЛАЙДЕР */
+let slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((img, i) => {
+        img.classList.remove("active");
+        if (i === index) img.classList.add("active");
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(() => {
+    nextSlide();
+}, 3000);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;          /* черный фон */
+    color: #fff;               /* белый текст по умолчанию */
+}
+
+/* ================= НАВИГАЦИЯ ================= */
+nav {
+    background: #000;          /* черная навигация */
+    padding: 15px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700;            /* желтый при наведении */
+}
+
+.nav-links .active {
+    color: #FFD700;            /* желтый активный пункт */
+}
+
+/* ================= HERO ================= */
+.hero {
+    max-width: 600px;          /* блок меньше */
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 44px;
+    color: #FFD700;            /* заголовок желтый */
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ccc;               /* светло-серый подзаголовок */
+}
+
+/* ================= БЛОК ОПИСАНИЯ ================= */
+.about {
+    background: #fff;          /* белый фон */
+    color: #000;               /* черный текст */
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    font-size: 14px;
+}
+
+.about img {
+    width: 150px;              /* маленькая квадратная картинка */
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+}
+
+/* ================= ФАКТЫ ================= */
+.fact {
+    background: #eee;          /* светло-серый фон */
+    color: #000;               /* черный текст */
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 300px;
+    text-align: center;
+}
+
+.fact:hover {
+    transform: scale(1.02);
+    background: #ddd;          /* чуть темнее при наведении */
+}
+
+.done {
+    background: #FFD700 !important; /* желтый для отмеченных */
+    color: #000;
+}
+
+/* ================= КАРТИНКИ ================= */
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* ================= ФУТЕР ================= */
+footer {
+    background: #000;           /* черный футер */
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    max-width: 250px;
+}
+
+.footer-column h3 {
+    color: #FFD700;             /* желтые заголовки футера */
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}

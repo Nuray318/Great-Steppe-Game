@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ҰЛЫ ДАЛА ҚҰРЫЛТАЙЫ</title>
+<link rel="icon" type="image/png" href="about.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2c2c2c;  /* темно-серый фон */
+    color: #fff;
+}
+
+/* НАВИГАЦИЯ */
+nav {
+    background: #1f1f1f;  /* темно-серый */
+    padding: 15px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700;  /* желтый акцент */
+}
+
+.nav-links .active {
+    color: #FFD700;
+}
+
+/* HERO */
+.hero {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 44px;
+    color: #FFD700;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* КАРТИНКИ (КВАДРАТ) */
+img {
+    width: 150px;         /* квадрат */
+    height: 150px;
+    object-fit: cover;    /* заполнение без искажений */
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* БЛОК ОПИСАНИЯ */
+.about {
+    background: #444;  /* темно-серый */
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* ФАКТЫ */
+.fact {
+    background: #555;  /* средне-серый */
+    color: #fff;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 300px;
+}
+
+.fact:hover {
+    transform: scale(1.02);
+    background: #666;  /* светлее при наведении */
+}
+
+.done {
+    background: #FFD700 !important; /* желтый */
+    color: #000;
+}
+
+/* ФУТЕР */
+footer {
+    background: #1f1f1f;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    max-width: 250px;
+}
+
+.footer-column h3 {
+    color: #FFD700;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    color: #bbb;  /* светло-серый текст */
+}
+/* 📱 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 768px) {
+
+    /* ЗАГОЛОВКИ */
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    /* HERO */
+    .hero {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    /* КАРТИНКИ */
+    img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    /* ФАКТЫ */
+    .fact {
+        width: 90%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* НАВИГАЦИЯ */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- НАВИГАЦИЯ -->
+<nav>
+<ul class="nav-links">
+<li><a class="active" href="index.html">Бастапқы бет</a></li>
+<li><a href="game.html">Ойын туралы</a></li>
+<li><a href="buy.html">Ойынды алу</a></li>
+<li><a href="jon.html">Жоңғар шапқыншылығы</a></li>
+<li><a href="otzyv.html">Пікірлер</a></li>
+</ul>
+</nav>
+
+<!-- КОНТЕНТ -->
+<div class="hero">
+<h1>Ұлы Дала Құрылтайы</h1>
+<div class="subtitle">Әр шешім тарихқа із қалдырады</div>
+
+<div class="about">
+<img src="about.jpg">
+<p>
+Бұл ойын жоңғар шапқыншылығы 
+ кезеңін модельдеу арқылы 
+тарихи ойлауды 
+дамытуға арналған. 
+Ойын барысында сен 
+хан, би, батыр
+ немесе халық рөлін 
+ алып, ел тағдырына 
+әсер ететін 
+шешімдер қабылдайсың.
+</p>
+</div>
+
+<h2>Жоңғар шапқыншылығы туралы деректер</h2>
+
+<div class="fact" onclick="markDone(this)">
+<img src="fact1.jpg">
+<p>«Ақтабан шұбырынды» – қазақ халқының ең ауыр кезеңдерінің бірі болды</p>
+</div>
+
+<div class="fact" onclick="markDone(this)">
+<img src="fact2.jpg">
+<p>Жоңғар шапқыншылығы қазақ жүздерінің бірігуіне себеп болды</p>
+</div>
+
+<div class="fact" onclick="markDone(this)">
+<img src="fact3.jpg">
+<p>Бұл кезеңде батырлар мен билердің рөлі ерекше маңызды болды</p>
+</div>
+
+</div>
+
+<!-- JS -->
+<script>
+function markDone(element) {
+    if (!element.classList.contains("done")) {
+        element.classList.add("done");
+        element.innerHTML = "✔ Білемін / Меңгердім";
+    }
+}
+</script>
+
+<!-- ФУТЕР -->
+<footer>
+<div class="footer-container">
+
+<div class="footer-column">
+<h3>Біз жайлы</h3>
+<p>«Ұлы Дала Құрылтайы» — бұл қазақ тарихын, әсіресе жоңғар шапқыншылығы кезеңін заманауи форматта үйретуге арналған білім беру үстел ойыны. Жобаның мақсаты — оқушылардың тарихи ойлауын дамыту, ұлттық құндылықтарды дәріптеу және оқуды қызықты ету.</p>
+</div>
+
+<div class="footer-column">
+<h3>Байланыс</h3>
+<p>Email: tleukabyl_nuray@bk.ru</p>
+<p>Тел: +7 702 123 456</p>
+<p>Атырау қаласы</p>
+</div>
+
+<div class="footer-column">
+<h3>Әлеуметтік желі</h3>
+<a href="https://www.instagram.com/greatsteppe.game/">Instagram</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Ұлы Дала Құрылтайы
+</div>
+</footer>
+
+</body>
+</html>

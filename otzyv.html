@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Пікірлер</title>
+<link rel="icon" type="image/png" href="about.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2c2c2c; /* темно-серый фон */
+    color: #fff;
+    text-align: center;
+}
+
+/* НАВИГАЦИЯ */
+nav {
+    background: #1f1f1f;
+    padding: 15px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: #FFD700;
+}
+
+/* ГЛАВНЫЙ КОНТЕЙНЕР */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* ЗАГОЛОВОК */
+h1 {
+    font-size: 40px;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* КАРТОЧКИ ОТЗЫВОВ */
+.review-card {
+    background: #444; /* темно-серый */
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.review-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* АВАТАР ИМЯ */
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #FFD700;
+}
+
+.review-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #FFD700;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+/* КНОПКИ НАВИГАЦИИ */
+.nav-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #FFD700;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: #e6c200;
+}
+/* 📱 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .container {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    /* НАВИГАЦИЯ */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    /* КАРТОЧКИ */
+    .review-card {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .review-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .review-header h3 {
+        font-size: 16px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    /* КНОПКИ */
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Бастапқы бет</a></li>
+<li><a href="game.html">Ойын туралы</a></li>
+<li><a  href="buy.html">Ойынды алу</a></li>
+<li><a href="jon.html">Жоңғар шапқыншылығы</a></li>
+<li><a class="active" href="otzyv.html">Пікірлер</a></li>
+</ul>
+</nav>
+<div class="container">
+    <h1>Пікірлер</h1>
+    <div class="subtitle">Қатысушылардың ойлары мен тәжірибесі</div>
+
+    <!-- КАРТОЧКИ ОТЗЫВОВ -->
+    <div class="review-card active">
+        <div class="review-header">
+            <img src="ava.png" alt="Аватар">
+            <h3>Айдана</h3>
+        </div>
+        <div class="review-text">
+            Бұл ойын нағыз тарихи тәжірибе берді! Ойын барысында әр шешімнің салдарына жауапкершілікпен қарауды үйрендім.
+        </div>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+       <img src="m.png" alt="Аватар">
+            <h3>Нұрлан</h3>
+        </div>
+        <div class="review-text">
+            Мен хан рөлінде ойнадым, өте қызықты болды. Әр қадам ойды тереңдетіп, стратегия құруға мәжбүр етті.
+        </div>
+    </div>
+
+    <div class="review-card">
+        <div class="review-header">
+         <img src="ava.png" alt="Аватар">
+            <h3>Жанар</h3>
+        </div>
+        <div class="review-text">
+            Ойын тек қызық қана емес, сонымен қатар тарихты жақсы түсінуге көмектесті. Достармен ойнаған кезде өте көңілді болды.
+        </div>
+    </div>
+
+    <!-- КНОПКИ НАВИГАЦИИ -->
+    <div class="nav-buttons">
+        <button id="prevBtn">← Алдыңғы</button>
+        <button id="nextBtn">Келесі →</button>
+    </div>
+</div>
+
+<script>
+// JavaScript для плавного переключения отзывов
+const reviews = document.querySelectorAll(".review-card");
+let current = 0;
+
+const showReview = (index) => {
+    reviews.forEach((r, i) => {
+        r.classList.remove("active");
+        if(i === index) r.classList.add("active");
+    });
+};
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    current = (current + 1) % reviews.length;
+    showReview(current);
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+    current = (current - 1 + reviews.length) % reviews.length;
+    showReview(current);
+});
+</script>
+<footer>
+<div class="footer-container">
+
+<div class="footer-column">
+<h3>Біз жайлы</h3>
+<p>«Ұлы Дала Құрылтайы» — бұл қазақ тарихын, әсіресе жоңғар шапқыншылығы кезеңін заманауи форматта үйретуге арналған білім беру үстел ойыны. Жобаның мақсаты — оқушылардың тарихи ойлауын дамыту, ұлттық құндылықтарды дәріптеу және оқуды қызықты ету.</p>
+</div>
+
+<div class="footer-column">
+<h3>Байланыс</h3>
+<p>Email: tleukabyl_nuray@bk.ru</p>
+<p>Тел: +7 702 123 456</p>
+<p>Атырау қаласы</p>
+</div>
+
+<div class="footer-column">
+<h3>Әлеуметтік желі</h3>
+<a href="https://www.instagram.com/greatsteppe.game/">Instagram</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Ұлы Дала Құрылтайы
+</div>
+</footer>
+</body>
+</html>

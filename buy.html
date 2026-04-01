@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ойынды сатып алу</title>
+<link rel="icon" type="image/png" href="about.jpg">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ОБЩИЕ СТИЛИ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2c2c2c; /* темно-серый фон всей страницы */
+    color: white;
+    text-align: center;
+}
+
+/* КОНТЕЙНЕР */
+.container {
+    padding: 50px 20px;
+}
+
+/* ЗАГОЛОВКИ */
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* НАВИГАЦИЯ */
+nav {
+    background: #1f1f1f; /* темно-серый фон навигации */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #FFD700; /* желтый */
+}
+
+/* ФОРМА */
+form {
+    background: #3a3a3a; /* темно-серая форма */
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* ПОЛЯ ВВОДА */
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    background: #555; /* средний серый для полей */
+    color: white;
+}
+
+/* SELECT */
+select {
+    background: #555; 
+    color: white;
+}
+
+/* КНОПКА */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #FFD700; /* желтая */
+    color: black;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e6c200; /* темнее желтого */
+}
+
+/* ПРИМЕЧАНИЕ */
+.note {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+    color: #fff;
+}
+/* 📱 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 768px) {
+
+    /* ЗАГОЛОВКИ */
+    h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    /* НАВИГАЦИЯ */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    /* ФОРМА */
+    form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* КНОПКА */
+    button {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    /* ПРИМЕЧАНИЕ */
+    .note {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- НАВИГАЦИЯ -->
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Бастапқы бет</a></li>
+<li><a href="game.html">Ойын туралы</a></li>
+<li><a class="active" href="buy.html">Ойынды алу</a></li>
+<li><a href="jon.html">Жоңғар шапқыншылығы</a></li>
+<li><a href="otzyv.html">Пікірлер</a></li>
+</ul>
+</nav>
+
+<div class="container">
+    <h1>Ұлы Дала Құрылтайы</h1>
+    <div class="subtitle">Ойынды сатып алу</div>
+
+    <form onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Аты-жөніңіз" required>
+        <input type="tel" id="phone" placeholder="Телефон нөмірі" required>
+        <input type="text" id="city" placeholder="Қала" required>
+
+        <select id="quantity" required>
+            <option value="">Саны</option>
+            <option value="1">1 дана</option>
+            <option value="2">2 дана</option>
+            <option value="3">3 дана</option>
+        </select>
+
+        <button type="submit">WhatsApp арқылы тапсырыс беру</button>
+    </form>
+
+    <div class="note">
+        Батырманы басқанда WhatsApp ашылады
+    </div>
+</div>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let city = document.getElementById("city").value;
+    let quantity = document.getElementById("quantity").value;
+
+    if (quantity === "") {
+        alert("Саныңызды таңдаңыз!");
+        return;
+    }
+
+    let adminPhone = "7702123456";
+
+    let message = `Сәлем! Мен "Ұлы Дала Құрылтайы" ойынын сатып алғым келеді.
+Аты: ${name}
+Телефон: ${phone}
+Қала: ${city}
+Саны: ${quantity}`;
+
+    let url = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
+<footer>
+<div class="footer-container">
+
+<div class="footer-column">
+<h3>Біз жайлы</h3>
+<p>«Ұлы Дала Құрылтайы» — бұл қазақ тарихын, әсіресе жоңғар шапқыншылығы кезеңін заманауи форматта үйретуге арналған білім беру үстел ойыны. Жобаның мақсаты — оқушылардың тарихи ойлауын дамыту, ұлттық құндылықтарды дәріптеу және оқуды қызықты ету.</p>
+</div>
+
+<div class="footer-column">
+<h3>Байланыс</h3>
+<p>Email: tleukabyl_nuray@bk.ru</p>
+<p>Тел: +7 702 123 456</p>
+<p>Атырау қаласы</p>
+</div>
+
+<div class="footer-column">
+<h3>Әлеуметтік желі</h3>
+<a href="https://www.instagram.com/greatsteppe.game/">Instagram</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Ұлы Дала Құрылтайы
+</div>
+</footer>
+</body>
+</html>
